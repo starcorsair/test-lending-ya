@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+width: 100%;}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.chess_section-one {
+
+    width: 100%;
+}
+.section-one_block-one {
+ display: flex;
+ gap: 64px;
+justify-content: center;
+}
+
+.block-one-text {
+    margin-left: 72px;
+    padding-top: 106.92px;
+}
+
+.block-one-img {
+    background-image: url(assets/Frame_chess-players.svg) ;
+    width: 394px;
+    height: 250px;
+    margin-right: 72px;
+    margin-top: 80px;
+  
+}
+.section-one_block-two {
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+}
+
+.block-two-text {
+    padding-top: 64px;
+}
+
+.block-two-img {
+    background-image: url(assets/Frame_onechessplayer_final.svg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 474px;
+    height: 527px;
+    margin-top: 64px;
+}
+
+/*table*/
+
+.text-table {
+    border: none;
+	margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+
+.text-table  td {
+	border-bottom: 2px solid #D0D0D0;
+  
+}
+
+.table-left {
+    border-right: 2px solid #D0D0D0;
+    color: #313131;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: left;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+}
+
+.table-right {
+    color: #313131;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: left;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+.table-span
+{
+    text-decoration: line-through;
+    text-decoration-color: #F54932;
+    margin-right: 12px;
+}
+
+.text-url {
+    color: #3057A2;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    margin-top: 48px;
+    text-decoration: none;
+}
+
+/*all blocks*/
+
+.text-indent {
+    font-family: "Merriweather", Georgia, serif;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 135%;
+   font-weight: 400;
+    color: #313131;
+    max-width: 764px;
+    text-transform: uppercase;
+    text-align: left;
+
+}
+.chess_span {
+    font-family: "Merriweather", Georgia, serif;
+    font-style: normal;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 135%;
+    color: #F54932;
+    text-transform: uppercase;
+}
+ 
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: #E9DED4;
+
+   
+}
+.footer-text-indent
+{
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    color: #313131;
+    margin-top: 40px;
+    margin-bottom: 72px;
+    max-width: 1222px;
+    max-height: 38px;
+
+    
+
+}
+
+.carousel-container {
+    display: none;
+}
+
+/*mobile version*/
+
+@media screen and (max-width: 375px) {
+
+    /*all*/
+    .text-indent {
+        font-size: 28px;
+        max-width: 335px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .chess_span {
+        font-size: 28px;
+    }
+
+    /*block one*/
+    .block-one-text {
+        padding-top: 48px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .block-one-img {
+        width: 335px;
+        height: 212px;
+        margin-right: 21px;
+        margin-left: 19px;
+        margin-top: 24px;
+
+    }
+/*two*/
+    .section-one_block-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .block-two-img {
+        max-width: 335px;
+        max-height: 402px;
+        margin-top: 34px;
+    }
+
+    .block-two-text {
+        padding-top: 24.44px;
+    }
+   /*table*/
+   .text-table {
+    border: none;
+	margin-bottom: 40px;
+    margin-top: 44px;
+    
+}
+
+/*link*/
+
+.text-url {
+  font-size: 18px;
+  margin-top: 0px;
+ 
+   
+}
+/*footer*/
+.footer {
+width: 100%;
+max-height: 252px;
+height: fit-content;
+}
+
+.footer-text-indent
+{
+font-size: 18px; 
+margin-bottom: 60px;
+width: 335px;
+margin: 0;
+padding-top: 40px;
+padding-bottom: 40px;
+padding-left: 20px;
+max-height: fit-content;
+
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  .controls {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .prev,
+  .next {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .indicators {
+    margin-top: 10px;
+  }
+  
+  .indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: #333;
+  }
+    
+}

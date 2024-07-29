@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!--section one-->
+        <section class="chess_section-one">
+            <!--block one-->
+<div class="section-one_block-one">
+    <div class="block-one-text">
+        <p class="text-indent">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span class="chess_span">«Плодотворная дебютная идея»</span></p>
+    </div>
+    <div class="block-one-img"></div>
+</div>
+<!--block two-->
+<div class="section-one_block-two">
+    <div class="block-two-img"></div>
+    <div class="block-two-text">
+        <p class="text-indent">и <span class="chess_span">Сеанс одновременной игры в шахматы на 160 досках </span>гроссмейстера О. Бендера</p>
+        <table class="text-table">
+            <tbody>
+                <tr>
+                <td class="table-left">Место проведения:</td>
+                <td class="table-right">Клуб «Картонажник»</td>
+                </tr>
+                <tr>
+                <td class="table-left">Дата и время мероприятия:</td>
+                <td class="table-right">22 июня 1927 г. в 18:00</td>
+                </tr>
+                <tr>
+                <td class="table-left">Стоимость входных билетов:</td>
+                <td class="table-right">20 коп.</td>
+                </tr>
+                <tr>
+                <td class="table-left">Плата за игру:</td>
+                <td class="table-right">50 коп.</td>
+                </tr>
+                <tr>
+                <td class="table-left">Взнос на телеграммы:</td>
+                <td class="table-right"><span class="table-span">100 руб.</span>21 руб. 16 коп.</td>
+                </tr>
+                </tbody>
+        </table>
+        <a class="text-url" href="#">По всем вопросам обращаться в администрацию к К. Михельсону</a>
+    </div>
+</div>
+        </section>
+    </main>
+    <!--carousel-->
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">Слайд 1</div>
+          <div class="slide">Слайд 2</div>
+          <div class="slide">Слайд 3</div>
+          <div class="slide">Слайд 4</div>
+          <div class="slide">Слайд 5</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="prev">&#10094;</button>
+        <div class="indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    <footer class="footer">
+        <p class="footer-text-indent">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel');
+  const slides = document.querySelectorAll('.slide');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const indicators = document.querySelectorAll('.indicator');
+
+  let currentSlide = 0;
+
+  function goToSlide(slideIndex) {
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+    });
+
+    indicators.forEach((indicator, index) => {
+      indicator.classList.remove('active');
+      if (index === slideIndex) {
+        indicator.classList.add('active');
+      }
+    });
+
+    currentSlide = slideIndex;
+  }
+
+  prevButton.addEventListener('click', function () {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    goToSlide(currentSlide);
+  });
+
+  nextButton.addEventListener('click', function () {
+    currentSlide = (currentSlide + 1) % slides.length;
+    goToSlide(currentSlide);
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', function () {
+      goToSlide(index);
+    });
+  });
+});
+    </script>
+</body>
+</html>
